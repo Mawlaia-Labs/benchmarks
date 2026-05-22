@@ -1,0 +1,127 @@
+{
+  "product": "pii",
+  "dataset": "ai4privacy/pii-masking-400k",
+  "run_date": "2026-05-21",
+  "n_samples": 1000,
+  "seed": 42,
+  "entity_types": [
+    "email",
+    "phone",
+    "credit_card",
+    "ssn"
+  ],
+  "providers": {
+    "mawlaia": {
+      "n_items": 1000,
+      "errors": 0,
+      "latency": {
+        "p50_ms": 24.5,
+        "p95_ms": 112.8,
+        "mean_ms": 38.5
+      },
+      "per_type_metrics": {
+        "email": {
+          "tp": 409,
+          "fp": 10,
+          "fn": 27,
+          "precision": 0.9761,
+          "recall": 0.9381,
+          "f1": 0.9567,
+          "ci95_low": 0.93989,
+          "ci95_high": 0.9729025
+        },
+        "phone": {
+          "tp": 149,
+          "fp": 205,
+          "fn": 229,
+          "precision": 0.4209,
+          "recall": 0.3942,
+          "f1": 0.4071,
+          "ci95_low": 0.3608825,
+          "ci95_high": 0.45301
+        },
+        "credit_card": {
+          "tp": 3,
+          "fp": 5,
+          "fn": 104,
+          "precision": 0.375,
+          "recall": 0.028,
+          "f1": 0.0522,
+          "ci95_low": 0.0,
+          "ci95_high": 0.1197
+        },
+        "ssn": {
+          "tp": 87,
+          "fp": 20,
+          "fn": 126,
+          "precision": 0.8131,
+          "recall": 0.4085,
+          "f1": 0.5438,
+          "ci95_low": 0.48159749999999996,
+          "ci95_high": 0.60362
+        }
+      },
+      "macro_f1": {
+        "value": 0.4899,
+        "ci95_low": 0.46399500000000005,
+        "ci95_high": 0.5171074999999999
+      }
+    },
+    "mawlaia_llm": {
+      "n_items": 1000,
+      "errors": 0,
+      "latency": {
+        "p50_ms": 951.9,
+        "p95_ms": 2317.6,
+        "mean_ms": 1160.7
+      },
+      "per_type_metrics": {
+        "email": {
+          "tp": 426,
+          "fp": 30,
+          "fn": 10,
+          "precision": 0.9342,
+          "recall": 0.9771,
+          "f1": 0.9552,
+          "ci95_low": 0.9383975,
+          "ci95_high": 0.9702
+        },
+        "phone": {
+          "tp": 307,
+          "fp": 241,
+          "fn": 71,
+          "precision": 0.5602,
+          "recall": 0.8122,
+          "f1": 0.6631,
+          "ci95_low": 0.6247,
+          "ci95_high": 0.6998025
+        },
+        "credit_card": {
+          "tp": 64,
+          "fp": 81,
+          "fn": 43,
+          "precision": 0.4414,
+          "recall": 0.5981,
+          "f1": 0.5079,
+          "ci95_low": 0.4297975,
+          "ci95_high": 0.5818074999999999
+        },
+        "ssn": {
+          "tp": 115,
+          "fp": 47,
+          "fn": 98,
+          "precision": 0.7099,
+          "recall": 0.5399,
+          "f1": 0.6133,
+          "ci95_low": 0.5575,
+          "ci95_high": 0.6716025
+        }
+      },
+      "macro_f1": {
+        "value": 0.6849,
+        "ci95_low": 0.6570975,
+        "ci95_high": 0.713805
+      }
+    }
+  }
+}

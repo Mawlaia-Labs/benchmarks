@@ -1,0 +1,56 @@
+{
+  "product": "docparse_public",
+  "dataset": "naver-clova-ix/cord-v2",
+  "n_samples": 95,
+  "seed": 42,
+  "target_fields": [
+    "total_price",
+    "subtotal_price"
+  ],
+  "providers": {
+    "mawlaia_llamaparse": {
+      "field_metrics": {
+        "total_price": {
+          "accuracy": 0.8211,
+          "ci95_low": 0.7474,
+          "ci95_high": 0.8947,
+          "n": 95
+        },
+        "subtotal_price": {
+          "accuracy": 0.875,
+          "ci95_low": 0.7969,
+          "ci95_high": 0.9531,
+          "n": 64
+        }
+      },
+      "latency": {
+        "p50_ms": 5848.9,
+        "p95_ms": 8252.7,
+        "mean_ms": 6115.8
+      },
+      "errors": 1
+    },
+    "llamaparse": {
+      "field_metrics": {
+        "total_price": {
+          "accuracy": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0,
+          "n": 95
+        },
+        "subtotal_price": {
+          "accuracy": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0,
+          "n": 64
+        }
+      },
+      "latency": {
+        "p50_ms": 2692.6,
+        "p95_ms": 3740.7,
+        "mean_ms": 2880.8
+      },
+      "errors": 0
+    }
+  }
+}

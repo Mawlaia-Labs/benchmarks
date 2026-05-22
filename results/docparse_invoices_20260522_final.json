@@ -1,0 +1,78 @@
+{
+  "product": "docparse",
+  "dataset": "mychen76/invoices-and-receipts_ocr_v1",
+  "n_samples": 100,
+  "seed": 42,
+  "target_fields": [
+    "invoice_date",
+    "total_gross_worth"
+  ],
+  "providers": {
+    "mawlaia_llamaparse": {
+      "field_metrics": {
+        "invoice_date": {
+          "accuracy": 1.0,
+          "ci95_low": 1.0,
+          "ci95_high": 1.0,
+          "n": 100
+        },
+        "total_gross_worth": {
+          "accuracy": 1.0,
+          "ci95_low": 1.0,
+          "ci95_high": 1.0,
+          "n": 100
+        }
+      },
+      "latency": {
+        "p50_ms": 21456.4,
+        "p95_ms": 31161.5,
+        "mean_ms": 21676.4
+      },
+      "errors": 0
+    },
+    "mawlaia_pipeline": {
+      "field_metrics": {
+        "invoice_date": {
+          "accuracy": 1.0,
+          "ci95_low": 1.0,
+          "ci95_high": 1.0,
+          "n": 100
+        },
+        "total_gross_worth": {
+          "accuracy": 0.99,
+          "ci95_low": 0.96,
+          "ci95_high": 1.0,
+          "n": 100
+        }
+      },
+      "latency": {
+        "p50_ms": 1085.7,
+        "p95_ms": 2059.9,
+        "mean_ms": 1251.9
+      },
+      "errors": 0
+    },
+    "llamaparse_standalone": {
+      "field_metrics": {
+        "invoice_date": {
+          "accuracy": 1.0,
+          "ci95_low": 1.0,
+          "ci95_high": 1.0,
+          "n": 100
+        },
+        "total_gross_worth": {
+          "accuracy": 1.0,
+          "ci95_low": 1.0,
+          "ci95_high": 1.0,
+          "n": 100
+        }
+      },
+      "latency": {
+        "p50_ms": 2791.7,
+        "p95_ms": 3903.4,
+        "mean_ms": 2991.8
+      },
+      "errors": 0
+    }
+  }
+}

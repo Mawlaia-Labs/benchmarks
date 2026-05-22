@@ -1,0 +1,156 @@
+{
+  "product": "pii",
+  "dataset": "gretelai/synthetic_pii_finance_multilingual",
+  "n_samples": 1000,
+  "seed": 42,
+  "entity_types": [
+    "EMAIL",
+    "PHONE",
+    "SSN",
+    "CREDIT_CARD",
+    "IP_ADDRESS"
+  ],
+  "providers": {
+    "mawlaia": {
+      "latency": {
+        "p50_ms": 18.1,
+        "p95_ms": 22.4,
+        "mean_ms": 18.6
+      },
+      "errors": 0,
+      "metrics": {
+        "per_type": {
+          "EMAIL": {
+            "f1": 0.9124,
+            "ci95_low": 0.8911,
+            "ci95_high": 0.9316,
+            "n_items": 569
+          },
+          "PHONE": {
+            "f1": 0.5941,
+            "ci95_low": 0.5551,
+            "ci95_high": 0.6336,
+            "n_items": 623
+          },
+          "SSN": {
+            "f1": 0.85,
+            "ci95_low": 0.7722,
+            "ci95_high": 0.9167,
+            "n_items": 90
+          },
+          "CREDIT_CARD": {
+            "f1": 0.4,
+            "ci95_low": 0.305,
+            "ci95_high": 0.4947,
+            "n_items": 95
+          },
+          "IP_ADDRESS": {
+            "f1": 0.9773,
+            "ci95_low": 0.947,
+            "ci95_high": 0.9962,
+            "n_items": 88
+          }
+        },
+        "macro_f1": {
+          "value": 0.746747526894765,
+          "ci95_low": 0.5412929814402195,
+          "ci95_high": 0.9253776750677511
+        }
+      }
+    },
+    "mawlaia_llm": {
+      "latency": {
+        "p50_ms": 1002.0,
+        "p95_ms": 2826.0,
+        "mean_ms": 1263.1
+      },
+      "errors": 0,
+      "metrics": {
+        "per_type": {
+          "EMAIL": {
+            "f1": 0.912,
+            "ci95_low": 0.8909,
+            "ci95_high": 0.9318,
+            "n_items": 578
+          },
+          "PHONE": {
+            "f1": 0.6911,
+            "ci95_low": 0.6547,
+            "ci95_high": 0.7246,
+            "n_items": 642
+          },
+          "SSN": {
+            "f1": 0.7523,
+            "ci95_low": 0.6711,
+            "ci95_high": 0.8288,
+            "n_items": 111
+          },
+          "CREDIT_CARD": {
+            "f1": 0.7808,
+            "ci95_low": 0.7034,
+            "ci95_high": 0.8503,
+            "n_items": 118
+          },
+          "IP_ADDRESS": {
+            "f1": 0.7565,
+            "ci95_low": 0.6724,
+            "ci95_high": 0.829,
+            "n_items": 115
+          }
+        },
+        "macro_f1": {
+          "value": 0.7785448416598248,
+          "ci95_low": 0.7212815397371075,
+          "ci95_high": 0.8489774549589519
+        }
+      }
+    },
+    "openai_zeroshot": {
+      "latency": {
+        "p50_ms": 1385.7,
+        "p95_ms": 3394.9,
+        "mean_ms": 1699.0
+      },
+      "errors": 0,
+      "metrics": {
+        "per_type": {
+          "EMAIL": {
+            "f1": 0.9192,
+            "ci95_low": 0.8986,
+            "ci95_high": 0.9369,
+            "n_items": 573
+          },
+          "PHONE": {
+            "f1": 0.8361,
+            "ci95_low": 0.8081,
+            "ci95_high": 0.8635,
+            "n_items": 622
+          },
+          "SSN": {
+            "f1": 0.7128,
+            "ci95_low": 0.6279,
+            "ci95_high": 0.7932,
+            "n_items": 112
+          },
+          "CREDIT_CARD": {
+            "f1": 0.7287,
+            "ci95_low": 0.6493,
+            "ci95_high": 0.807,
+            "n_items": 115
+          },
+          "IP_ADDRESS": {
+            "f1": 0.7519,
+            "ci95_low": 0.6737,
+            "ci95_high": 0.8213,
+            "n_items": 113
+          }
+        },
+        "macro_f1": {
+          "value": 0.7897486025613191,
+          "ci95_low": 0.7269807893145716,
+          "ci95_high": 0.8644905157589629
+        }
+      }
+    }
+  }
+}

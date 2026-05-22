@@ -1,0 +1,31 @@
+{
+  "product": "eval_public",
+  "dataset": "lmsys/mt_bench_human_judgments",
+  "seed": 42,
+  "n_samples": 400,
+  "n_non_tie": 304,
+  "providers": {
+    "mawlaia_pairwise": {
+      "metrics": {
+        "pairwise_accuracy": {
+          "value": 0.7007,
+          "ci95_low": 0.6447,
+          "ci95_high": 0.7468
+        },
+        "pearson_r": {
+          "value": 0.4128,
+          "ci95_low": 0.3067,
+          "ci95_high": 0.5101
+        },
+        "n_non_tie": 304,
+        "n_total": 400
+      },
+      "latency": {
+        "p50_ms": 1620.0,
+        "p95_ms": 3811.3,
+        "mean_ms": 1960.3
+      },
+      "errors": 1
+    }
+  }
+}

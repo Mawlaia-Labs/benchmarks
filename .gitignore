@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+*.pyo
+.env
+.env.*
+results/*_draft_*.json
+results/*_test_*.json
+results/*_debug_*.json
+*.log
+.DS_Store
